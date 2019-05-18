@@ -5,7 +5,7 @@ var db = require("../models");
 
 passport.use(
   new localStrategy({ usernameField: email }, function(email, password, done) {
-    db.findOne({
+    db.User.findOne({
       where: {
         email: email
       }
