@@ -1,6 +1,6 @@
 var express = require("express");
 
-var route = express.Router();
+var router = express.Router();
 
 router.get("/", function(req, res) {
   res.render("index");
@@ -23,3 +23,5 @@ router.get("/signup", function(req, res) {
 
   res.render("sign-up");
 });
+
+module.exports = router;
