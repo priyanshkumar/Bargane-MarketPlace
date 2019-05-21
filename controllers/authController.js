@@ -10,7 +10,7 @@ router.post("/api/login/:page", passport.authenticate("local"), function(
 ) {
   page = req.params.page;
   if (page === "index") {
-    res.json("/" + page);
+    res.json("/");
   } else {
     res.json("/" + page);
   }

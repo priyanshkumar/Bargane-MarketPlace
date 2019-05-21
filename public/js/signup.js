@@ -13,7 +13,10 @@ $(document).ready(function() {
     };
 
     if (!userData.email || !userData.password) {
-      return "Sorry! Please Try again later";
+      error = "email or password field is empty";
+      $(".msg").text(error);
+      $("#alert").fadeIn(500);
+      return;
     }
     // If we have an email and password, run the signUpUser function
     signUpUser(userData.email, userData.password);
@@ -29,14 +32,21 @@ $(document).ready(function() {
       password: password
     })
       .then(function(data) {
-        window.location.replace(data);
+        if (data.errors) {
+          console.log(data);
+          var error = data.errors[0].message;
+          $(".msg").text(error);
+          $("#alert").fadeIn(500);
+        } else {
+          window.location.replace(data);
+        }
       })
       .catch(handleLoginErr);
   }
 
   function handleLoginErr(err) {
     console.log(err);
-    $("#alert .msg").text(err.responseJSON);
+    $(".msg").text(err.responseJSON);
     $("#alert").fadeIn(500);
   }
 });

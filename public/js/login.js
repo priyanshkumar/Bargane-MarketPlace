@@ -27,7 +27,11 @@ $(document).ready(function() {
         window.location.replace(data);
       })
       .catch(function(err) {
-        console.log(err);
+        if (err) {
+          var error = "email or password does not match";
+          $(".msg").text(error);
+          $("#alerts").fadeIn(500);
+        }
       });
   }
 });
