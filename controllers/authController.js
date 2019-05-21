@@ -9,7 +9,11 @@ router.post("/api/login/:page", passport.authenticate("local"), function(
   res
 ) {
   page = req.params.page;
-  res.json("/" + page);
+  if (page === "index") {
+    res.json("/" + page);
+  } else {
+    res.json("/" + page);
+  }
 });
 
 router.post("/api/signup", function(req, res) {
@@ -26,12 +30,12 @@ router.post("/api/signup", function(req, res) {
     });
 });
 
-app.get("/logout", function(req, res) {
+router.get("/logout", function(req, res) {
   req.logout();
   res.redirect("/");
 });
 
-app.get("/api/userdata", function(req, res) {
+router.get("/api/userdata", function(req, res) {
   if (!req.user) {
     res.json("No User Found");
   } else {
@@ -41,3 +45,5 @@ app.get("/api/userdata", function(req, res) {
     });
   }
 });
+
+module.exports = router;

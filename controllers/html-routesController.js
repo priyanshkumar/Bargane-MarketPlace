@@ -6,17 +6,15 @@ router.get("/", function(req, res) {
   res.render("index");
 });
 
-router.get("/:route/login", function(req, res) {
-  var route = req.params.route;
-
+router.get("/login", function(req, res) {
+  // If the user already has an account send them to the members page
   if (req.user) {
     res.render("index");
   }
-
   res.render("login");
 });
 
-router.get("/signup", function(req, res) {
+router.get("/sign-up", function(req, res) {
   if (req.user) {
     res.render("index");
   }
