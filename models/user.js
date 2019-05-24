@@ -12,7 +12,13 @@ module.exports = function(sequelize, DataTypes) {
     },
     password: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
+      validate: {
+        len: {
+          args: [7, 42],
+          msg: "The password length should be between 7 and 42 characters."
+        }
+      }
     }
   });
 
