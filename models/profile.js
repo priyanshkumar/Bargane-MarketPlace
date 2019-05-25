@@ -29,6 +29,10 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false
     },
+    PCode: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
     province: { type: DataTypes.STRING, allowNull: false },
     country: { type: DataTypes.STRING, allowNull: false }
   });
