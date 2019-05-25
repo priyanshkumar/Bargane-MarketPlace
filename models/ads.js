@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var ADS = sequelize.define("ad", {
+  var ADS = sequelize.define("Ad", {
     name: {
       type: DataTypes.STRING,
       allowNull: false
@@ -42,5 +42,19 @@ module.exports = function(sequelize, DataTypes) {
       }
     }
   });
+
+  ADS.associate = function(models) {
+    ADS.belongsTo(models.User, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
+
+  ADS.associate = function(models) {
+    ADS.hasMany(models.Image, {
+      onDelete: "cascade"
+    });
+  };
   return ADS;
 };

@@ -36,5 +36,13 @@ module.exports = function(sequelize, DataTypes) {
     province: { type: DataTypes.STRING, allowNull: false },
     country: { type: DataTypes.STRING, allowNull: false }
   });
+
+  Profile.associate = function(models) {
+    Profile.belongsTo(models.User, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
   return Profile;
 };
