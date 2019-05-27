@@ -56,7 +56,7 @@ router.get("/user", authenticated, function(req, res) {
     }
   })
     .then(function(result) {
-      if (!result.id) {
+      if (!result) {
         res.render("user-form");
       } else {
         res.redirect("/");
