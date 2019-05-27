@@ -1,0 +1,46 @@
+<div class="row container">
+    {{> header}}
+    <div class=" border col-12 sm-9 md-6 lg-3 m-5">
+        <div class="bg-secondary text-align-center text-light text-center mb-3 py-2">
+            <h5>Post your ad</h5>
+        </div>
+        <form>
+            <div class="form-group">
+                <label for="name">Ad title</label>
+                <input class="form-control" type="text" id="name" placeholder="Your ad title" />
+                <small class="form-text text-muted">
+                    Be creative to get better response</small>
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea class="form-control" id="message" rows="3"></textarea>
+            </div>
+            <!-- Price -->
+            <div class="form-group">
+                <label for="price">Sale Price $</label>
+                <input class="form-control" type="number" id="name" placeholder="$$$" />
+            </div>
+            <!-- Upload image -->
+            <div>
+                <input type="file" id="image" />
+                <label class="custom-file-label" for="myfile">Upload picture</label>
+            </div>
+            <br />
+            <br />
+            <div class="form-group">
+                <label for="contactphone">Your contact No. </label>
+                <input class="form-control" type="number" id="name" placeholder="Phone Number" />
+            </div>
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input class="form-control" type="email" id="email" placeholder="Enter email" />
+                <small class="form-text text-muted">
+                    Your email will not be shared</small>
+            </div>
+            <div class="form-group">
+                <label for="name">Your contact No. </label>
+                <input class="form-control" type="number" id="name" placeholder="Phone Number" />
+            </div>
+        </form>
+    </div>
+</div>
