@@ -1,6 +1,9 @@
 var express = require("express");
 
 var router = express.Router();
+var db = require("../models");
+
+var authenticated = require("../config/middelware/isAuthenticated");
 
 router.get("/", function(req, res) {
   var data = {
@@ -42,8 +45,25 @@ router.get("/search", function(req, res) {
   res.render("search-apperance");
 });
 
-router.get("/post", function(req, res) {
+router.get("/post", authenticated, function(req, res) {
   res.render("post-ads");
 });
 
+router.get("/user", authenticated, function(req, res) {
+  db.Profile.findOne({
+    where: {
+      UserId: req.user.id
+    }
+  })
+    .then(function(result) {
+      if (!result) {
+        res.render("user-form");
+      } else {
+        res.redirect("/");
+      }
+    })
+    .catch(function(err) {
+      console.log(err);
+    });
+});
 module.exports = router;

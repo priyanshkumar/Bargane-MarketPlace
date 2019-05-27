@@ -22,7 +22,7 @@ router.post("/api/signup", function(req, res) {
     password: req.body.password
   })
     .then(function() {
-      res.redirect(307, "/api/login/index");
+      res.redirect(307, "/api/login/user");
     })
     .catch(function(err) {
       console.log(err);

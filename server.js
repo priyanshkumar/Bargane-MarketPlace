@@ -27,6 +27,9 @@ app.use(htmlroutes);
 var authRoutes = require("./controllers/authController");
 app.use(authRoutes);
 
+var profileRoutes = require("./controllers/profileController");
+app.use(profileRoutes);
+
 db.sequelize.sync().then(function() {
   app.listen(port, function() {
     console.log(`Server running on port ${port}`);

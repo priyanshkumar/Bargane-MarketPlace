@@ -16,7 +16,7 @@ module.exports = function(sequelize, DataTypes) {
       unique: true,
       validate: {
         len: {
-          args: [10, 10],
+          args: [3, 12],
           msg: "The password length should be between 7 and 42 characters."
         }
       }
@@ -33,8 +33,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false
     },
-    province: { type: DataTypes.STRING, allowNull: false },
-    country: { type: DataTypes.STRING, allowNull: false }
+    province: { type: DataTypes.STRING, allowNull: false }
   });
 
   Profile.associate = function(models) {
