@@ -41,4 +41,9 @@ router.get("/sign-up", function(req, res) {
 router.get("/search", function(req, res) {
   res.render("search-apperance");
 });
+
+router.get("/post", function(req, res) {
+  res.render("post-ads");
+});
+
 module.exports = router;
