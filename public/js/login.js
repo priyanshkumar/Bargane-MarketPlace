@@ -13,7 +13,7 @@ $(document).ready(function() {
     if (!userData.email || !userData.password) {
       error = "email or password field is empty";
       $(".msg").text(error);
-      $("#alert").fadeIn(500);
+      $("#alerts").fadeIn(500);
       return;
     }
     loginUser(userData.email, userData.password);
