@@ -1,22 +1,26 @@
-<h1>Profile Form</h1>
+{{> header}}
+
+
 <div class="container center_div">
+  <img class="userlogo" src="images/bargane-notxt.png" alt="">
+  <h3 class="text-primary">Profile Form</h3>
   <form action="/api/profile" method="post">
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="inputFirst">First Name</label>
-        <input type="text" class="form-control" name="fname" id="inputFirst" placeholder="Malaka">
+        <input type="text" class="form-control" name="fname" id="inputFirst" placeholder="first name">
       </div>
       <div class="form-group col-md-6">
         <label for="inputLast">Last Name</label>
-        <input type="text" class="form-control" name="lname" id="inputLast" placeholder="Alzoibi">
+        <input type="text" class="form-control" name="lname" id="inputLast" placeholder="last name">
       </div>
       <div class="form-group col-md-6">
         <label for="email">Email</label>
-        <input type="email" class="form-control" name="email" id="email" placeholder="Alzoibi">
+        <input type="email" class="form-control" name="email" id="email" placeholder="example@example.com">
       </div>
       <div class="form-group col-md-6">
         <label for="phone">Phone Number</label>
-        <input type="number" class="form-control" name="phone" id="phone" placeholder="Alzoibi">
+        <input type="tel" class="form-control" name="phone" id="phone" placeholder="123567890">
       </div>
     </div>
     <div class="form-group">
@@ -26,7 +30,7 @@
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="inputCity">City</label>
-        <input type="text" class="form-control" name="city" id="inputCity">
+        <input type="text" class="form-control" name="city" id="inputCity" placeholder="City">
       </div>
       <div class="form-group col-md-4">
         <label for="inputProvince">Province</label>
@@ -41,9 +45,11 @@
       </div>
       <div class="form-group col-md-2">
         <label for="inputZip">Postal Code</label>
-        <input type="text" class="form-control" name="pcode" id="inputPostal">
+        <input type="text" class="form-control" name="pcode" id="inputPostal" placeholder="A1A1A1">
       </div>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
 </div>
+
+{{> footer}}
