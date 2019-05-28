@@ -1,28 +1,36 @@
 <h1>Profile Form</h1>
 <div class="container center_div">
-  <form>
+  <form action="/profile" method="post">
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="inputFirst">First Name</label>
-        <input type="text" class="form-control" id="inputFirst" placeholder="Malaka">
+        <input type="text" class="form-control" name="fname" id="inputFirst" placeholder="Malaka">
       </div>
       <div class="form-group col-md-6">
         <label for="inputLast">Last Name</label>
-        <input type="text" class="form-control" id="inputLast" placeholder="Alzoibi">
+        <input type="text" class="form-control" name="lname" id="inputLast" placeholder="Alzoibi">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" name="email" id="email" placeholder="Alzoibi">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="phone">Phone Number</label>
+        <input type="number" class="form-control" name="phone" id="phone" placeholder="Alzoibi">
       </div>
     </div>
     <div class="form-group">
       <label for="inputAddress">Address</label>
-      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+      <input type="text" class="form-control" name="address" id="inputAddress" placeholder="1234 Main St">
     </div>
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="inputCity">City</label>
-        <input type="text" class="form-control" id="inputCity">
+        <input type="text" class="form-control" name="city" id="inputCity">
       </div>
       <div class="form-group col-md-4">
         <label for="inputProvince">Province</label>
-        <select id="inputState" class="form-control">
+        <select id="inputState" name="province" class="form-control">
           <option selected>Choose...</option>
           <option value="1">Alberta</option>
           <option value="2">British Columbia</option>
@@ -33,7 +41,7 @@
       </div>
       <div class="form-group col-md-2">
         <label for="inputZip">Postal Code</label>
-        <input type="text" class="form-control" id="inputPostal">
+        <input type="text" class="form-control" name="pcode" id="inputPostal">
       </div>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
