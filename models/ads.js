@@ -23,23 +23,6 @@ module.exports = function(sequelize, DataTypes) {
     logo: {
       type: DataTypes.BLOB,
       allowNull: false
-    },
-    email: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        isEmail: true
-      }
-    },
-    phone: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: {
-          args: [10],
-          msg: "Invalid Number"
-        }
-      }
     }
   });
 
