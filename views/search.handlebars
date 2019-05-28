@@ -1,13 +1,15 @@
 <div class="container my-5 ">
     <div class="row">
-        <div class="col-12">
+        <div class="col-12">{{#unless checker}}
             <h1 class="search apperance">
                 NO SEARCH APPERANCE FOUND FOR 'XYZ'
             </h1>
-
+            {{/unless}}
+            {{#if checker}}
             <h1 class="search apperance">
                 SEARCH APPERANCE FOR 'XYZ'
             </h1>
+            {{/if}}
         </div>
     </div>
 

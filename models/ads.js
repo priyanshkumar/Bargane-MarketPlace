@@ -34,10 +34,5 @@ module.exports = function(sequelize, DataTypes) {
     });
   };
 
-  ADS.associate = function(models) {
-    ADS.hasMany(models.Image, {
-      onDelete: "cascade"
-    });
-  };
   return ADS;
 };
