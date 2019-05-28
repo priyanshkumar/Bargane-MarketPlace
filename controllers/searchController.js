@@ -18,7 +18,7 @@ router.get("/search", function(req, res) {
       console.log(result);
       //   var data = {
       //     checker: false,
-      //     result: []x
+      //     result: []
       //   };
       //   if (result) {
       //     (data.checker = true), (data.result = result);
