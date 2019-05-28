@@ -11,8 +11,6 @@ router.post("/api/post", authenticated, function(req, res) {
     price: req.body.price,
     quantity: req.body.quantity,
     logo: req.body.logo,
-    email: req.body.email,
-    phone: req.body.phone,
     UserId: req.user.id
   })
     .then(function() {
