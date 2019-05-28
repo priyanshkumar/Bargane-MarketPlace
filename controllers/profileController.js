@@ -3,7 +3,7 @@ var router = express.Router();
 var db = require("../models");
 var authenticated = require("../config/middelware/isAuthenticated");
 
-router.post("/profile", authenticated, function(req, res) {
+router.post("/api/profile", authenticated, function(req, res) {
   console.log(req.body);
   console.log(req.user);
 

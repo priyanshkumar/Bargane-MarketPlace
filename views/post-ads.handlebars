@@ -1,46 +1,73 @@
-<div class="row container">
-    {{> header}}
-    <div class=" border col-12 sm-9 md-6 lg-3 m-5">
-        <div class="bg-secondary text-align-center text-light text-center mb-3 py-2">
-            <h5>Post your ad</h5>
+{{> header}}
+<div class="container border my-3">
+    <div class="row">
+        <div class="col-12 p-0">
+            <div class="bg-secondary text-align-center text-light text-center mb-3 py-2">
+                <h5>Post your ad</h5>
+            </div>
         </div>
-        <form>
-            <div class="form-group">
-                <label for="name">Ad title</label>
-                <input class="form-control" type="text" id="name" placeholder="Your ad title" />
-                <small class="form-text text-muted">
-                    Be creative to get better response</small>
-            </div>
-            <div class="form-group">
-                <label for="description">Description</label>
-                <textarea class="form-control" id="message" rows="3"></textarea>
-            </div>
-            <!-- Price -->
-            <div class="form-group">
-                <label for="price">Sale Price $</label>
-                <input class="form-control" type="number" id="name" placeholder="$$$" />
-            </div>
-            <!-- Upload image -->
-            <div>
-                <input type="file" id="image" />
-                <label class="custom-file-label" for="myfile">Upload picture</label>
-            </div>
-            <br />
-            <br />
-            <div class="form-group">
-                <label for="contactphone">Your contact No. </label>
-                <input class="form-control" type="number" id="name" placeholder="Phone Number" />
-            </div>
-            <div class="form-group">
-                <label for="email">Email address</label>
-                <input class="form-control" type="email" id="email" placeholder="Enter email" />
-                <small class="form-text text-muted">
-                    Your email will not be shared</small>
-            </div>
-            <div class="form-group">
-                <label for="name">Your contact No. </label>
-                <input class="form-control" type="number" id="name" placeholder="Phone Number" />
-            </div>
-        </form>
+    </div>
+    <div class="row">
+        <div class="col-12 px-5">
+            <form action="/api/post" method="POST">
+                <div class="form-group">
+                    <label for="name">Title</label>
+                    <input class="form-control" type="text" name="title" id="name" placeholder="title" />
+                    <small class="form-text text-muted">
+                        Use one standard word to get better response</small>
+                </div>
+                <div class="form-group col-4 p-0">
+                    <label for="inputCategory">Category</label>
+                    <select id="inputCategory" name="category" class="form-control">
+                        <option selected>Choose...</option>
+                        <option value="C_Men">Clothing Men</option>
+                        <option value="C_Women">Clothing Women</option>
+                        <option value="C_kids">Clothing Kids</option>
+                        <option value="Phone">Phone</option>
+                        <option value="Laptops">Laptops</option>
+                        <option value="Accessories">Accessories</option>
+                        <option value="S_Men">Shoes Men</option>
+                        <option value="S_Women">Shoes Women</option>
+                        <option value="S_Kids">Shoes kids</option>
+                        <option value="Furniture">Furniture</option>
+                        <option value="Kitchen">Kitchen</option>
+                        <option value="Cars">Cars</option>
+                        <option value="Suv's">Suv's</option>
+                        <option value="Truck">Truck</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea class="form-control" id="message" name="description" rows="3"></textarea>
+                </div>
+                <!-- Price -->
+                <div class="form-group">
+                    <label for="price">Your Price</label>
+                    <input class="form-control" type="text" id="price" name="price" placeholder="$$$" />
+                </div>
+
+                <div class="form-group">
+                    <label for="quantity">Quantity</label>
+                    <input class="form-control" type="number" min="0" id="quantity" name="quantity"
+                        placeholder="qty." />
+                </div>
+                <!-- Upload image -->
+                <div class="form-group">
+                    <label for="myfile">Upload picture</label>
+                    <input type="file" name="photo" class="form-control" id="image" />
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input class="form-control" type="email" name="email" id="email" placeholder="Enter email" />
+                </div>
+                <div class="form-group">
+                    <label for="name">Your contact No. </label>
+                    <input class="form-control" type="tel" id="phone" name="phone" placeholder="Phone Number" />
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
     </div>
 </div>
+
+{{> footer}}
