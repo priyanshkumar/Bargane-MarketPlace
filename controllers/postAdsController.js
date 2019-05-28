@@ -16,7 +16,7 @@ router.post("/api/post", authenticated, function(req, res) {
     UserId: req.user.id
   })
     .then(function() {
-      req.redirect("/");
+      res.redirect("/");
     })
     .catch(function(err) {
       console.log(err);
