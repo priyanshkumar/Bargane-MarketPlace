@@ -11,20 +11,18 @@ router.get("/search", function(req, res) {
       name: {
         [Op.substring]: "iphone"
       }
-    },
-    include: [db.User]
+    }
   })
     .then(function(result) {
-      console.log(result);
-      //   var data = {
-      //     checker: false,
-      //     result: []
-      //   };
-      //   if (result) {
-      //     (data.checker = true), (data.result = result);
-      //   }
-      //   res.render("search", data);
-      res.json(result);
+      var data = {
+        checker: false,
+        result: {}
+      };
+      if (result) {
+        (data.checker = true), (data.result = result);
+      }
+      res.render("search", data);
+      // res.json(data);
     })
     .catch(function(err) {
       console.log(err);

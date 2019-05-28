@@ -9,82 +9,21 @@
             <h1 class="search apperance">
                 SEARCH APPERANCE FOR 'XYZ'
             </h1>
-            {{/if}}
         </div>
     </div>
 
     <div class="row">
+        {{#each result}}
         <div class="col-4 my-3">
             <div class="card bg-dark text-white">
                 <img src="images/artist.jpg" class="card-img search-image" alt="...">
                 <div class="card-img-overlay">
-                    <h5 class="card-title">Shoes</h5>
+                    <h5 class="card-title">{{name}}</h5>
+                    <h5 class="card-title">{{price}}</h5>
                 </div>
             </div>
         </div>
-        <div class="col-4 my-3">
-            <div class="card bg-dark text-white">
-                <img src="images/artist.jpg" class="card-img search-image" alt="...">
-                <div class="card-img-overlay">
-                    <h5 class="card-title">Shoes</h5>
-                </div>
-            </div>
-        </div>
-        <div class="col-4 my-3">
-            <div class="card bg-dark text-white">
-                <img src="images/artist.jpg" class="card-img search-image" alt="...">
-                <div class="card-img-overlay">
-                    <h5 class="card-title">Shoes</h5>
-                </div>
-            </div>
-        </div>
-        <div class="col-4 my-3">
-            <div class="card bg-dark text-white">
-                <img src="images/artist.jpg" class="card-img search-image" alt="...">
-                <div class="card-img-overlay">
-                    <h5 class="card-title">Shoes</h5>
-                </div>
-            </div>
-        </div>
-        <div class="col-4 my-3">
-            <div class="card bg-dark text-white">
-                <img src="images/artist.jpg" class="card-img search-image" alt="...">
-                <div class="card-img-overlay">
-                    <h5 class="card-title">Shoes</h5>
-                </div>
-            </div>
-        </div>
-        <div class="col-4 my-3">
-            <div class="card bg-dark text-white">
-                <img src="images/artist.jpg" class="card-img search-image" alt="...">
-                <div class="card-img-overlay">
-                    <h5 class="card-title">Shoes</h5>
-                </div>
-            </div>
-        </div>
-        <div class="col-4 my-3">
-            <div class="card bg-dark text-white">
-                <img src="images/artist.jpg" class="card-img search-image" alt="...">
-                <div class="card-img-overlay">
-                    <h5 class="card-title">Shoes</h5>
-                </div>
-            </div>
-        </div>
-        <div class="col-4 my-3">
-            <div class="card bg-dark text-white">
-                <img src="images/artist.jpg" class="card-img search-image" alt="...">
-                <div class="card-img-overlay">
-                    <h5 class="card-title">Shoes</h5>
-                </div>
-            </div>
-        </div>
-        <div class="col-4 my-3">
-            <div class="card bg-dark text-white">
-                <img src="images/artist.jpg" class="card-img search-image" alt="...">
-                <div class="card-img-overlay">
-                    <h5 class="card-title">Shoes</h5>
-                </div>
-            </div>
-        </div>
+        {{/each}}
     </div>
+    {{/if}}
 </div>
