@@ -40,6 +40,10 @@ router.get("/sign-up", function(req, res) {
   res.render("sign-up");
 });
 
+router.get("/product", function(req, res) {
+  res.render("product-display");
+});
+
 router.get("/post", authenticated, function(req, res) {
   res.render("post-ads");
 });
