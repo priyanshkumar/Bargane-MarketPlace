@@ -1,14 +1,15 @@
+{{> header-brand}}
 {{> header}}
 <div class="container border my-3">
     <div class="row">
         <div class="col-12 p-0">
-            <div class="bg-secondary text-align-center text-light text-center mb-3 py-2">
+            <div class="bg-secondary text-align-center text-light text-center py-2">
                 <h5>Post your ad</h5>
             </div>
         </div>
     </div>
     <div class="row">
-        <div class="col-12 px-5">
+        <div class="col-12 p-5">
             <form action="/api/post" method="post">
                 <div class="form-group">
                     <label for="name">Title</label>
@@ -54,9 +55,12 @@
                 <!-- Upload image -->
                 <div class="form-group">
                     <label for="myfile">Upload picture</label>
-                    <input type="file" name="logo" class="form-control" id="image" />
+                    <input type="text" name="logo" class="form-control" id="image"
+                        placeholder="Upload your item picture" />
+                    <small class="form-text text-danger">
+                        Accepts only URLS</small>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary btn-block ">Submit</button>
             </form>
         </div>
     </div>
