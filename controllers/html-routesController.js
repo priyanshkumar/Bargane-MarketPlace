@@ -40,11 +40,6 @@ router.get("/sign-up", function(req, res) {
   res.render("sign-up");
 });
 
-//search route for dynamic search page
-router.get("/search", function(req, res) {
-  res.render("search-apperance");
-});
-
 router.get("/product", function(req, res) {
   res.render("product-display");
 });
