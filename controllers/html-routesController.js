@@ -45,6 +45,10 @@ router.get("/search", function(req, res) {
   res.render("search-apperance");
 });
 
+router.get("/product", function(req, res) {
+  res.render("product-display");
+});
+
 router.get("/post", authenticated, function(req, res) {
   res.render("post-ads");
 });
