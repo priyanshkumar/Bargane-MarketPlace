@@ -44,7 +44,7 @@ router.get("/product", function(req, res) {
   res.render("product-display");
 });
 
-router.get("/user-ads", function(req, res) {
+router.get("/user-ads", authenticated, function(req, res) {
   res.render("user-ads");
 });
 
