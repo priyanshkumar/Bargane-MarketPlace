@@ -5,11 +5,11 @@ var db = require("../models");
 
 var authenticated = require("../config/middelware/isAuthenticated");
 const Op = sequelize.Op;
-router.get("/search", function(req, res) {
+router.post("/search", function(req, res) {
   db.Ad.findAll({
     where: {
       name: {
-        [Op.substring]: "iphone"
+        [Op.substring]: req.body.search
       }
     }
   })

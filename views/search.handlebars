@@ -15,11 +15,12 @@
     <div class="row">
         {{#each result}}
         <div class="col-4 my-3">
-            <div class="card bg-dark text-white">
-                <img src="images/artist.jpg" class="card-img search-image" alt="...">
-                <div class="card-img-overlay">
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
                     <h5 class="card-title">{{name}}</h5>
-                    <h5 class="card-title">{{price}}</h5>
+                    <p class="card-text">{{price}}</p>
+                    <a class="btn btn-primary image" colid={{id}}>View</a>
                 </div>
             </div>
         </div>
@@ -27,3 +28,4 @@
     </div>
     {{/if}}
 </div>
+<script type="text/javascript" src="js/ad-display.js"></script>
