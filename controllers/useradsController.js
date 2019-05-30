@@ -14,7 +14,6 @@ router.get("/userads", authenticated, function(req, res) {
     var data = {
       post: result
     };
-    console.log(data);
     res.render("user-ads", data);
   });
 });

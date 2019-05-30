@@ -38,6 +38,8 @@ app.use(searchRoutes);
 
 var useradsRoutes = require("./controllers/useradsController");
 app.use(useradsRoutes);
+var productRoutes = require("./controllers/productController");
+app.use(productRoutes);
 
 db.sequelize.sync().then(function() {
   app.listen(port, function() {
