@@ -17,6 +17,7 @@ router.get("/", function(req, res) {
 
 router.get("/login", function(req, res) {
   // If the user already has an account send them to the members page
+  req.logout();
   var data = {
     checker: false
   };
@@ -29,6 +30,7 @@ router.get("/login", function(req, res) {
 });
 
 router.get("/sign-up", function(req, res) {
+  req.logout();
   var data = {
     checker: false
   };
