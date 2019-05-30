@@ -41,6 +41,9 @@ app.use(useradsRoutes);
 var productRoutes = require("./controllers/productController");
 app.use(productRoutes);
 
+var headerRoutes = require("./controllers/headerController");
+app.use(headerRoutes);
+
 db.sequelize.sync().then(function() {
   app.listen(port, function() {
     console.log(`Server running on port ${port}`);
