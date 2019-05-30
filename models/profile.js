@@ -11,12 +11,12 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     phone: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
       unique: true,
       validate: {
         len: {
-          args: [10],
+          args: [10, 12],
           msg: "The Incorrect Phone"
         }
       }
