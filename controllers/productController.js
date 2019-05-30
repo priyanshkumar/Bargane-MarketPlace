@@ -4,6 +4,7 @@ var db = require("../models");
 var authenticated = require("../config/middelware/isAuthenticated");
 
 router.get("/api/product/:usage/:id", authenticated, function(req, res) {
+
   db.Ad.findOne({
     where: {
       id: req.params.id
@@ -24,6 +25,7 @@ router.get("/api/product/:usage/:id", authenticated, function(req, res) {
           if(req.params.usage === "personal"){
             data.usage = true;
           }
+
           res.render("product-display", data);
         })
         .catch(function(err) {
