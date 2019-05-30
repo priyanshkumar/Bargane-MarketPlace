@@ -36,6 +36,9 @@ app.use(postRoutes);
 var searchRoutes = require("./controllers/searchController");
 app.use(searchRoutes);
 
+var useradsRoutes = require("./controllers/useradsController");
+app.use(useradsRoutes);
+
 db.sequelize.sync().then(function() {
   app.listen(port, function() {
     console.log(`Server running on port ${port}`);
