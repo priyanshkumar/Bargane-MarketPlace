@@ -46,3 +46,31 @@
   background-size: cover;
   background-position: center;
 }
+
+.h-line {
+  border-top: 1px solid rgb(136, 136, 136);
+}
+/* profile table edits */
+
+.profiletable {
+  width: 100%;
+}
+
+.profiletable td,
+th {
+  border-bottom: 1px solid rgb(136, 136, 136);
+  padding: 5px 20px;
+}
+tr:nth-child(even) {
+  background-color: #0a3e57;
+}
+
+tr:nth-child(odd) {
+  background-color: #245064;
+}
+
+/* profile box colour */
+
+.profbox {
+  background-color: rgb(27, 55, 66);
+}
