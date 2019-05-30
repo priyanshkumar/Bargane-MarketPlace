@@ -61,7 +61,7 @@ router.post("/api/profile", authenticated, function(req, res) {
           res.redirect("/");
         })
         .catch(function(err) {
-          console.log(err);
+          res.json(err);
         });
     } else {
       db.Profile.update(

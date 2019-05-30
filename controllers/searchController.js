@@ -9,7 +9,7 @@ router.post("/search", function(req, res) {
   db.Ad.findAll({
     where: {
       name: {
-        [Op.substring]: req.body.search
+        [Op.substring]: req.params.search
       }
     }
   })
@@ -18,8 +18,10 @@ router.post("/search", function(req, res) {
         checker: false,
         result: {}
       };
-      if (result) {
+      if (result.length !== 0) {
         (data.checker = true), (data.result = result);
+      } else {
+        data.checker = false;
       }
       res.render("search", data);
       // res.json(data);
