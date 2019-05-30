@@ -58,4 +58,8 @@ router.get("/delete/ad/:id", authenticated, function(req, res) {
       console.log(err);
     });
 });
+
+router.get("/view/ad/:id", authenticated, function(req, res) {
+  res.redirect("/api/product/personal/" + req.params.id);
+});
 module.exports = router;
