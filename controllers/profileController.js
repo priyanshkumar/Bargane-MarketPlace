@@ -45,6 +45,7 @@ router.post("/api/profile", authenticated, function(req, res) {
       UserId: req.user.id
     }
   }).then(function(result) {
+    console.log(req.body);
     if (!result) {
       db.Profile.create({
         fName: req.body.fname,
