@@ -5,3 +5,44 @@
 .userlogo {
   width: 10%;
 }
+
+.indexbox {
+  width: auto;
+  height: 200px;
+}
+
+#indexbox-1 {
+  background-image: url("/images/clothing-1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#indexbox-2 {
+  background-image: url("/images/cellphone.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#indexbox-3 {
+  background-image: url("/images/automobile.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#indexbox-4 {
+  background-image: url("/images/shoes.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#indexbox-5 {
+  background-image: url("/images/homeappliance.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#indexbox-6 {
+  background-image: url("/images/electronics.jpg");
+  background-size: cover;
+  background-position: center;
+}
