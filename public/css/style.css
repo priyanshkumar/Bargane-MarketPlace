@@ -87,7 +87,6 @@ tr:nth-child(odd) {
   display: none;
 }
 
-
 #search-li {
   padding: 8px;
 }
@@ -103,7 +102,13 @@ ion-icon {
 .d-image {
   width: 500px;
   height: 315px;
+}
 
 .formlogo {
   width: 100px;
+}
+
+.ua-display {
+  width: 170px;
+  height: 110px;
 }
