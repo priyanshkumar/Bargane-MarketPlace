@@ -60,6 +60,6 @@ router.get("/delete/ad/:id", authenticated, function(req, res) {
 });
 
 router.get("/view/ad/:id", authenticated, function(req, res) {
-  res.redirect("/api/product/personal/" + req.params.id);
+  res.redirect("/api/product/personal123/" + req.params.id);
 });
 module.exports = router;

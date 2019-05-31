@@ -88,13 +88,19 @@
           aria-haspopup="true" aria-expanded="false">
           <ion-icon name="contact"></ion-icon>
         </a>
+        {{#if check}}
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Log In</a>
-          <a class="dropdown-item" href="#">Log Out</a>
-        </div>
+          <a class="dropdown-item" href="/userads">Your Ad's</a>
+          <a class="dropdown-item" href="/profile">Profile</a>
+          <a class="dropdown-item" href="/logout">Log Out</a>
+        </div>{{else}}
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/sign-up">Sign Up</a>
+          <a class="dropdown-item" href="/login">Log In</a>
+        </div>{{/if}}
       </li>
       <li class="nav-item" id="mainpost">
-        <button class="btn btn-primary p-0 px-2 py-1"><strong>POST AD</strong></button>
+        <a href="/post" class="btn btn-primary p-0 px-2 py-1"><strong>POST AD</strong></a>
       </li>
     </ul>
   </div>

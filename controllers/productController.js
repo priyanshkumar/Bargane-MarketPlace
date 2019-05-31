@@ -3,7 +3,7 @@ var router = express.Router();
 var db = require("../models");
 var authenticated = require("../config/middelware/isAuthenticated");
 
-router.get("/api/product/:usage/:id", authenticated, function(req, res) {
+router.get("/:usage/:id", authenticated, function(req, res) {
 
   db.Ad.findOne({
     where: {
@@ -22,7 +22,7 @@ router.get("/api/product/:usage/:id", authenticated, function(req, res) {
             post: result,
             profile: p_result
           };
-          if(req.params.usage === "personal"){
+          if(req.params.usage === "personal123"){
             data.usage = true;
           }
 
