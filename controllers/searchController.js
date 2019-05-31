@@ -9,7 +9,7 @@ router.post("/search", function(req, res) {
   db.Ad.findAll({
     where: {
       name: {
-        [Op.substring]: req.params.search
+        [Op.substring]: req.body.search
       }
     }
   })
@@ -31,5 +31,7 @@ router.post("/search", function(req, res) {
       res.json(err);
     });
 });
+
+
 
 module.exports = router;

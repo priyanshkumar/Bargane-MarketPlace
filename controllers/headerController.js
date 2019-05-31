@@ -4,7 +4,7 @@ var passport = require("../config/passsport");
 
 var router = express.Router();
 
-router.get("/api/header/:category", function(req, res) {
+router.get("/:category", function(req, res) {
   db.Ad.findAll({
     where: {
       category: req.params.category

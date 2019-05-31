@@ -1,5 +1,4 @@
 require("dotenv").config();
-console.log(process.env.user);
 
 const config = {
   development: {

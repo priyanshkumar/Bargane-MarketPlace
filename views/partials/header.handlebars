@@ -1,122 +1,102 @@
 {{!-- bottom nav --}}
 <nav class="navbar navbar-expand-sm navbar-light bg-light border-bottom text-light mb-2">
-  
-    <span class="navbar-brand" href="#">
-      <span class="border rounded bg-secondary text-light py-1 px-2">Ads Posted</span>
-    </span>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Clothing
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/api/header/C_Men">Men</a>
-            <a class="dropdown-item" href="/api/header/C_Women">Women</a>
-            <a class="dropdown-item" href="/api/header/C_kids">Kids</a>
-          </div>
-        </li>
+  <span class="navbar-brand" href="#">
+    <span class="border rounded bg-secondary text-light py-1 px-2">Ads Posted</span>
+  </span>
 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Shoes
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/api/header/S_Men">Men</a>
-            <a class="dropdown-item" href="/api/header/S_Women">Women</a>
-            <a class="dropdown-item" href="/api/header/S_Kids">Kids</a>
-          </div>
-        </li>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Electronics
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/api/header/Phone">CellPhone</a>
-            <a class="dropdown-item" href="/api/header/Laptops">Laptops</a>
-            <a class="dropdown-item" href="/api/header/Accessories">Accessories</a>
-          </div>
-        </li>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Home Appliances
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/api/header/Furniture">Furniture</a>
-            <a class="dropdown-item" href="/api/header/Kitchen">Kitchen</a>
-          </div>
-        </li>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Auto
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/api/header/Cars<">Cars</a>
-            <a class="dropdown-item" href="/api/header/Suv's">Suv</a>
-            <a class="dropdown-item" href="/api/header/Truck">Trucks</a>
-          </div>
-        </li>
-      </ul>
-    </div>
-
-    <ul class="navbar-nav">
-      <li class="nav-item" id="search-li">
-        <a class="nav-link" href="#"></a>
-          <div class="container">
-              <form action="/search" method="post">
-                  <div class="input-group mb-3">
-                  <input type="text" class="form-control" placeholder="Search ADs" aria-label="Recipient's username" aria-describedby="button-addon2">
-                  <div class="input-group-append">
-                 <button class="btn btn-outline-secondary p-0" type="button" id="button-addon2"><img src="images/search-icon.png"></button>
-                  </div>
-          </div>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Clothing
         </a>
-      </li>
-      <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false"><img class="w-50" src="images/help-icon.png" alt=""></a>
-            Auto
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">FAQs</a>
-            <a class="dropdown-item" href="#">Site Map</a>
-          </div>
-      </li>
-      <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false"><img class="w-50" src="images/user-icon.png" alt=""></a>
-            Auto
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Log In</a>
-            <a class="dropdown-item" href="#">Log Out</a>
-          </div>
-      </li>
-      <li class="nav-item">
-        <button class="btn btn-primary mt-1" id=mainpost>POST AD</button>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/C_Men">Men</a>
+          <a class="dropdown-item" href="/C_Women">Women</a>
+          <a class="dropdown-item" href="/C_kids">Kids</a>
+        </div>
       </li>
 
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Shoes
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/S_Men">Men</a>
+          <a class="dropdown-item" href="/S_Women">Women</a>
+          <a class="dropdown-item" href="/S_Kids">Kids</a>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Electronics
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/Phone">CellPhone</a>
+          <a class="dropdown-item" href="/Laptops">Laptops</a>
+          <a class="dropdown-item" href="/Accessories">Accessories</a>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Home Appliances
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/Furniture">Furniture</a>
+          <a class="dropdown-item" href="/Kitchen">Kitchen</a>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Auto
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/Cars">Cars</a>
+          <a class="dropdown-item" href="/Suv's">Suv</a>
+          <a class="dropdown-item" href="/Truck">Trucks</a>
+        </div>
+      </li>
     </ul>
+  </div>
 
-
-
+  <ul class="navbar-nav">
+    <li class="nav-item" id="search-li">
+      <a class="nav-link" href="#"></a>
+      <form action="/search" method="post">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Search ADs" name="search">
+          <button class="btn btn-outline-secondary p-0" id="button-addon2">
+            <img src="images/search-icon.png"></button>
+        </div>
+      </form>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false"><img class="w-50" src="images/help-icon.png" alt=""></a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="#">FAQs</a>
+        <a class="dropdown-item" href="#">Site Map</a>
+      </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false"><img class="w-50" src="images/user-icon.png" alt=""></a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="#">Log In</a>
+        <a class="dropdown-item" href="#">Log Out</a>
+      </div>
+    </li>
+    <li class="nav-item">
+      <button class="btn btn-primary mt-1" id="mainpost">POST AD</button>
+    </li>
+  </ul>
 </nav>
-
-    </div>
-  </form>
-</div>
-
-<script type="text/javascript" src="js/logic.js"></script>
