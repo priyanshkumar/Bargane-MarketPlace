@@ -5,25 +5,24 @@
     <div class="row">
         <div class="col-12">{{#unless checker}}
             <h1 class="search apperance">
-                NO SEARCH APPERANCE FOUND FOR 'XYZ'
+                NO SEARCH FOUND
             </h1>
             {{/unless}}
-            {{#if checker}}
-            <h1 class="search apperance">
-                SEARCH APPERANCE FOR 'XYZ'
-            </h1>
-            {{/if}}
         </div>
     </div>
 
     <div class="row">
         {{#each result}}
-        <div class="col-4 my-3">
-            <div class="card" style="width: 18rem;">
+        <div class="col-3 my-3">
+            <div class="card" style="width: 16rem;">
                 <img src="{{logo}}" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">{{name}}</h5>
-                    <p class="card-text">{{price}}</p>
+                    <div class="row">
+                        <div class="col-12 d-flex justify-content-between">
+                            <h5 class="card-title">{{name}}</h5>
+                            <p class="card-text">${{price}}</p>
+                        </div>
+                    </div>
                     <a href="/api/product/user/{{id}}" class="btn btn-primary">View</a>
                 </div>
             </div>

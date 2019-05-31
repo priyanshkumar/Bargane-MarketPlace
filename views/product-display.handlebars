@@ -3,43 +3,48 @@
 
 <div class="container my-5 ">
     <div class="row">
-        <div class="col-12">
-
-            <h4 class="text-primary">
-
-                {{post.name}}
-                <hr>
-            </h4>
+        <div class="col-12 d-flex justify-content-between">
+            <div class="row w-100">
+                <div class="col-8">
+                    <h4 class="text-primary pl-5">
+                        {{post.name}}
+                    </h4>
+                </div>
+                <div class="col-4 d-flex justify-content-end">
+                    {{#if usage}}
+                    <a href="/update/ad/{{post.id}}" class="mr-2">
+                        <ion-icon name="create"></ion-icon>
+                    </a>
+                    <a href="/delete/ad/{{post.id}}">
+                        <ion-icon name="trash"></ion-icon>
+                    </a>
+                    {{/if}}
+                </div>
+            </div>
         </div>
-        <div class="col-6"><img src="{{post.logo}}" alt="{{post.logo}}"></div>
-        <div class="col-3 float-left text-primary">
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-7 d-flex justify-content-center"><img class="d-image" src="{{post.logo}}" alt="{{post.logo}}">
+        </div>
+        <div class="col-5 float-left text-primary pt-4">
             <h5>${{post.price}}</h5>
-            <br>
             <hr>
             <h6 class="text-secondary">Qty Available: {{post.quantity}}</h6>
             <hr>
-            <h6 class="text-secondary">Contact Tel: {{profile.phone}}</h6>
+            <h6 class="text-secondary">Name: {{profile.fName}} {{profile.lName}}</h6>
             <hr>
-            <h6 class="text-secondary">Contact Email: {{profile.email}}</h6>
+            <h6 class="text-secondary">Contact Tel: <strong>{{profile.phone}}</strong></h6>
             <hr>
-
+            <h6 class="text-secondary">Contact Email: <strong>{{profile.email}}</strong></h6>
+            <hr>
         </div>
-        <div class=" col-3 float-left">
-            {{#if usage}}
-            <div class="col-1">
-                <a href="/update/ad/{{post.id}}" class="btn btn-success py-1"> Update</a>
-            </div>
-            <div class="col-1">
-                <a href="/delete/ad/{{post.id}}" class="btn btn-danger py-1">Delete</a>
-            </div>
-            {{/if}}
-        </div>
-        <div class="row">
-            <div class="col-12 mt-3">
-                <p class="text-secondary">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem
-                    cupiditate quaerat optio praesentium sequi et accusamus ex soluta consequuntur enim blanditiis, aut
-                    libero quas distinctio sit earum rem laboriosam laudantium!</p>
-            </div>
+    </div>
+    <div class="row">
+        <div class="col-12 mt-3">
+            <p class="text-secondary px-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem
+                cupiditate quaerat optio praesentium sequi et accusamus ex soluta consequuntur enim blanditiis, aut
+                libero quas distinctio sit earum rem laboriosam laudantium!</p>
         </div>
     </div>
 </div>

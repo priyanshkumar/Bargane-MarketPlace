@@ -87,6 +87,23 @@ tr:nth-child(odd) {
   display: none;
 }
 
+
+#search-li {
+  padding: 8px;
+}
+
+#mainpost {
+  padding: 8px;
+}
+
+ion-icon {
+  font-size: 25px;
+}
+
+.d-image {
+  width: 500px;
+  height: 315px;
+
 .formlogo {
   width: 100px;
 }
