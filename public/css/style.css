@@ -1,3 +1,7 @@
+body {
+  font-family: "Quicksand", sans-serif;
+}
+
 .search-image {
   height: 310px;
 }
@@ -15,6 +19,10 @@
   background-image: url("/images/clothing-1.jpg");
   background-size: cover;
   background-position: center;
+}
+
+ion-icon {
+  font-size: 25px;
 }
 
 #indexbox-2 {
@@ -77,4 +85,8 @@ tr:nth-child(odd) {
 
 #searchdrop {
   display: none;
+}
+
+.formlogo {
+  width: 100px;
 }
