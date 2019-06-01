@@ -12,8 +12,12 @@ router.get("/userads", authenticated, function(req, res) {
     }
   }).then(function(result) {
     var data = {
+      checker: false,
       post: result
     };
+    if (req.user) {
+      data.checker = true;
+    }
     res.render("user-ads", data);
   });
 });
@@ -25,9 +29,12 @@ router.get("/update/ad/:id", authenticated, function(req, res) {
     }
   }).then(function(result) {
     var data = {
+      checker: false,
       post: result
     };
-    console.log(data);
+    if (req.user) {
+      data.checker = true;
+    }
     res.render("post-ads", data);
   });
 });

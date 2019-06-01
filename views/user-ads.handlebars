@@ -1,6 +1,10 @@
 {{> header-brand}}
-{{> header}}
 
+{{#if checker}}
+{{> header check=true}}
+{{else}}
+{{> header check=false}}
+{{/if}}
 
 
 <div class="container my-5 text-secondary">
@@ -10,7 +14,7 @@
             <img src="{{logo}}" class="ua-display" alt="Not Availabel">
         </div>
         <div class="col-3 d-flex align-items-center">
-            <h3 class="my-0">
+            <h3 class="my-0 font">
                 {{name}}
             </h3>
         </div>

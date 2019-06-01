@@ -16,12 +16,17 @@ router.post("/search", function(req, res) {
     .then(function(result) {
       var data = {
         checker: false,
+        checks: false,
         result: {}
       };
       if (result.length !== 0) {
-        (data.checker = true), (data.result = result);
+        (data.checks = true), (data.result = result);
       } else {
-        data.checker = false;
+        data.checks = false;
+      }
+
+      if (req.user) {
+        data.checker = true;
       }
       res.render("search", data);
       // res.json(data);
@@ -31,7 +36,5 @@ router.post("/search", function(req, res) {
       res.json(err);
     });
 });
-
-
 
 module.exports = router;

@@ -11,8 +11,12 @@ router.get("/profile", authenticated, function(req, res) {
   })
     .then(function(result) {
       data = {
-        profile: result
+        profile: result,
+        checker: false
       };
+      if (req.user) {
+        data.checker = true;
+      }
       res.render("profile", data);
     })
     .catch(function(err) {
