@@ -1,5 +1,11 @@
 {{> header-brand}}
-{{> header}}
+
+{{#if checker}}
+{{> header check=true}}
+{{else}}
+{{> header check=false}}
+{{/if}}
+
 <div class="container my-2">
 
     <div class="row col-9">
@@ -7,8 +13,8 @@
         <br>
         <div class="col-12 profbox text-light p-2">
             <div class="row">
-                <div class="col-6 d-flex justify-content-start text-light py-2">
-                    <h5>Your Profile</h5>
+                <div class="col-6 d-flex justify-content-start align-items-center text-light py-2">
+                    <h5 class="font">Your Profile</h5>
                 </div>
                 <div class="col-6 d-flex justify-content-end text-light py-2">
                     <a href="/update" id="update" class="btn btn-large">
@@ -18,7 +24,7 @@
                 </div>
             </div>
             <hr class="h-line mt-0">
-            <div class="row">
+            <div class="row mb-2">
                 <div class="col-12">
                     <table class="profiletable">
                         <tr>

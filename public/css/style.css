@@ -1,5 +1,6 @@
 body {
   font-family: "Quicksand", sans-serif;
+  height: 100vh;
 }
 
 .search-image {
@@ -111,4 +112,13 @@ ion-icon {
 .ua-display {
   width: 170px;
   height: 110px;
+}
+
+.font {
+  font-family: "Russo One", sans-serif;
+  font-size: 2rem;
+}
+
+.footerfix {
+  top: 48vh;
 }

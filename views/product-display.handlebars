@@ -1,12 +1,16 @@
 {{> header-brand}}
-{{> header}}
+{{#if checker}}
+{{> header check=true}}
+{{else}}
+{{> header check=false}}
+{{/if}}
 
 <div class="container my-5 ">
     <div class="row">
         <div class="col-12 d-flex justify-content-between">
             <div class="row w-100">
                 <div class="col-8">
-                    <h4 class="text-primary pl-5">
+                    <h4 class="text-primary pl-5 font">
                         {{post.name}}
                     </h4>
                 </div>

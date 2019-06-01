@@ -25,7 +25,6 @@ router.get("/login", function(req, res) {
     data.checker = true;
     res.render("index", data);
   }
-
   res.render("login");
 });
 
@@ -43,11 +42,23 @@ router.get("/sign-up", function(req, res) {
 });
 
 router.get("/user-ads", function(req, res) {
-  res.render("user-ads");
+  var data = {
+    checker: false
+  };
+  if (req.user) {
+    data.checker = true;
+  }
+  res.render("user-ads", data);
 });
 
 router.get("/post", authenticated, function(req, res) {
-  res.render("post-ads");
+  var data = {
+    checker: false
+  };
+  if (req.user) {
+    data.checker = true;
+  }
+  res.render("post-ads", data);
 });
 
 router.get("/user", authenticated, function(req, res) {
